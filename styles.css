@@ -225,3 +225,18 @@ footer {
   .summary-card { position: static; }
   form { padding: 22px; }
 }
+
+/* ===== 12. TOAST NOTIFICATION ===== */
+#toast {
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: #142850;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+    font-size: 16px;
+}
