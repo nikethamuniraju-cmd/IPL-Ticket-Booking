@@ -5,15 +5,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IPL 2026 Ticket Booking</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
   <!-- NAVIGATION -->
   <header>
     <nav class="navbar">
       <a href="#home" class="logo">IPL<span>Tickets</span></a>
+
       <ul class="nav-links">
         <li><a href="#matches">Matches</a></li>
         <li><a href="#booking">Book Ticket</a></li>
@@ -25,22 +29,24 @@
 
   <main>
 
-    <!-- HERO / BANNER -->
+    <!-- HERO -->
     <section class="hero" id="home">
       <h1>Experience The <span>Stadium Energy</span> Live!</h1>
       <p>Book your seats for IPL 2026 quickly and securely.</p>
+
       <div class="hero-buttons">
         <a href="#matches" class="btn btn-primary">View Schedule</a>
         <a href="#booking" class="btn btn-outline">Book Ticket</a>
       </div>
     </section>
 
-    <!-- ABOUT IPL 2026 -->
+    <!-- ABOUT IPL -->
     <section id="about">
       <h2 class="section-title">About IPL 2026</h2>
       <p class="section-sub">The Indian Premier League brings the best of T20 cricket to millions of fans.</p>
 
       <div class="two-col">
+
         <article class="card">
           <h3>Popular Teams</h3>
           <ul>
@@ -62,6 +68,7 @@
             <li>Narendra Modi Stadium, Ahmedabad</li>
           </ul>
         </article>
+
       </div>
     </section>
 
@@ -72,6 +79,7 @@
 
       <div class="filter-bar">
         <label for="teamFilter">Filter by Team:</label>
+
         <select id="teamFilter">
           <option value="all">All Teams</option>
           <option value="CSK">Chennai Super Kings</option>
@@ -100,6 +108,7 @@
           </thead>
 
           <tbody>
+
             <tr>
               <td>1</td>
               <td>CSK vs MI</td>
@@ -108,7 +117,7 @@
               <td>₹1,500</td>
               <td>₹3,500</td>
               <td>₹7,500</td>
-              <td><button type="button" class="btn btn-sm book-btn">Book</button></td>
+              <td><button type="button" class="btn btn-sm book-btn" data-match="CSK vs MI">Book</button></td>
             </tr>
 
             <tr>
@@ -119,7 +128,7 @@
               <td>₹1,800</td>
               <td>₹4,000</td>
               <td>₹8,000</td>
-              <td><button type="button" class="btn btn-sm book-btn">Book</button></td>
+              <td><button type="button" class="btn btn-sm book-btn" data-match="RCB vs KKR">Book</button></td>
             </tr>
 
             <tr>
@@ -130,7 +139,7 @@
               <td>₹1,400</td>
               <td>₹3,200</td>
               <td>₹7,000</td>
-              <td><button type="button" class="btn btn-sm book-btn">Book</button></td>
+              <td><button type="button" class="btn btn-sm book-btn" data-match="SRH vs MI">Book</button></td>
             </tr>
 
             <tr>
@@ -141,78 +150,108 @@
               <td>₹1,600</td>
               <td>₹3,800</td>
               <td>₹7,800</td>
-              <td><button type="button" class="btn btn-sm book-btn">Book</button></td>
+              <td><button type="button" class="btn btn-sm book-btn" data-match="KKR vs CSK">Book</button></td>
             </tr>
+
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- BOOKING FORM + SUMMARY -->
+    <!-- BOOKING FORM AND SUMMARY -->
     <section id="booking">
       <h2 class="section-title">Ticket Booking</h2>
       <p class="section-sub">Fill in your details to reserve seats</p>
 
       <div class="booking-layout">
-        <form action="#" method="post">
+
+        <form id="bookingForm" action="#" method="post">
 
           <div class="form-group">
             <label for="match">Match</label>
+
             <select id="match" name="match" required>
               <option value="">-- Select Match --</option>
-              <option>1 - CSK vs MI (Chennai)</option>
-              <option>2 - RCB vs KKR (Bengaluru)</option>
-              <option>3 - SRH vs MI (Hyderabad)</option>
-              <option>4 - KKR vs CSK (Kolkata)</option>
+              <option value="CSK vs MI">1 - CSK vs MI (Chennai)</option>
+              <option value="RCB vs KKR">2 - RCB vs KKR (Bengaluru)</option>
+              <option value="SRH vs MI">3 - SRH vs MI (Hyderabad)</option>
+              <option value="KKR vs CSK">4 - KKR vs CSK (Kolkata)</option>
             </select>
           </div>
 
           <div class="form-group">
             <label for="stand">Stand Category</label>
+
             <select id="stand" name="stand" required>
               <option value="">-- Select Stand --</option>
-              <option>General</option>
-              <option>Premium</option>
-              <option>VIP</option>
+              <option value="General">General</option>
+              <option value="Premium">Premium</option>
+              <option value="VIP">VIP</option>
             </select>
           </div>
 
           <div class="form-group">
             <label for="qty">Number of Tickets</label>
+
             <input type="number" id="qty" name="qty" min="1" max="10" value="1" required>
           </div>
 
           <div class="form-group">
             <label for="name">Name</label>
+
             <input type="text" id="name" name="name" placeholder="Enter your full name" required>
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
+
             <input type="email" id="email" name="email" placeholder="you@example.com" required>
           </div>
 
           <div class="form-group">
             <label for="phone">Phone Number</label>
+
             <input type="tel" id="phone" name="phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" required>
           </div>
 
           <button type="submit" class="btn btn-primary">Confirm Booking</button>
+
         </form>
 
+        <!-- LIVE BOOKING SUMMARY -->
         <aside class="summary-card">
+
           <h3>Booking Summary</h3>
+
           <ul>
-            <li><span>Match</span><strong>CSK vs MI</strong></li>
-            <li><span>Stand</span><strong>Premium</strong></li>
-            <li><span>Ticket Price</span><strong>₹3,500</strong></li>
-            <li><span>Quantity</span><strong>2</strong></li>
+            <li>
+              <span>Match</span>
+              <strong id="summaryMatch">Not Selected</strong>
+            </li>
+
+            <li>
+              <span>Stand</span>
+              <strong id="summaryStand">Not Selected</strong>
+            </li>
+
+            <li>
+              <span>Ticket Price</span>
+              <strong id="ticketPrice">₹0</strong>
+            </li>
+
+            <li>
+              <span>Quantity</span>
+              <strong id="summaryQuantity">1</strong>
+            </li>
           </ul>
+
           <p class="total">
             <span>Total Amount</span>
-            <strong>₹7,000</strong>
+            <strong id="totalPrice">₹0</strong>
           </p>
+
         </aside>
+
       </div>
     </section>
 
@@ -234,8 +273,9 @@
               <th>Status</th>
             </tr>
           </thead>
+
           <tbody>
-            <!-- Empty: records will be added later -->
+            <!-- Booking records can be added later -->
           </tbody>
         </table>
       </div>
@@ -247,6 +287,7 @@
       <p class="section-sub">Please read before visiting the stadium</p>
 
       <div class="cards">
+
         <article class="card">
           <div class="emoji">✅</div>
           <h3>Ticket Verification</h3>
@@ -264,6 +305,7 @@
           <h3>Prohibited Items</h3>
           <p>Outside food, bottles, sharp objects, banners and large bags are not allowed.</p>
         </article>
+
       </div>
     </section>
 

@@ -240,3 +240,18 @@ footer {
     z-index: 1000;
     font-size: 16px;
 }
+
+/* Activity 7 - Toast Notification */
+
+#toast {
+    display: none;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #111827;
+    color: white;
+    padding: 14px 22px;
+    border-radius: 8px;
+    z-index: 1000;
+    font-family: 'Poppins', sans-serif;
+}
